@@ -31,6 +31,9 @@ int main(void)
   // Make context current on main thread
   glfwMakeContextCurrent(window);
 
+  // Avoid tearing by limiting draws to one per refresh
+  glfwSwapInterval(1);
+
   // Main loop
   while(!glfwWindowShouldClose(window))
   {
