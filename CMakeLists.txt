@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(glfw_project C)
+project(cg22-u10 C)
 
 include(${CMAKE_BINARY_DIR}/cmake-build-release/conanbuildinfo.cmake)
 conan_basic_setup()
