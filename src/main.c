@@ -20,6 +20,10 @@ int main(void)
   // Handle Errors
   glfwSetErrorCallback(error_callback);
 
+  // Set required context version to OpenGL 4.0
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+
   // Try to create Window
   window = glfwCreateWindow(200, 200, "homework", NULL, NULL);
   if(!window)
