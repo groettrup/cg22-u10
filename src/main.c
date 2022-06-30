@@ -1,4 +1,4 @@
-
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -28,8 +28,11 @@ int main(void)
     exit(EXIT_FAILURE);
   }
 
-  // Make context current on main thread
+  // Make context current on main thread (gl now usable)
   glfwMakeContextCurrent(window);
+  
+  // load extensions using glad
+  gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
 
   // Avoid tearing by limiting draws to one per refresh
   glfwSwapInterval(1);
